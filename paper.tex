@@ -1,0 +1,87 @@
+% ============= single column ==============
+%\documentclass[a4paper,10pt]{article}
+% ============= Double Column ==============
+\documentclass[conference]{IEEEtran}
+% ==========================================
+
+\IEEEoverridecommandlockouts
+
+% *** GRAPHICS RELATED PACKAGES ***
+%
+\ifCLASSINFOpdf
+	
+\fi
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+
+\usepackage{units}
+\usepackage[tight,footnotesize]{subfigure}
+\usepackage{graphicx}
+
+\usepackage{tabularx}
+\usepackage{booktabs}
+
+\usepackage{comment}    %to use commnet command
+\usepackage{setspace}
+
+\usepackage{lipsum} % to use fig in multicolumn
+\usepackage{acronym}
+
+%Definition of the acronyms used in this paper
+\acrodef{5G}{five generation}
+\acrodef{CAPEX}{capital expenditures}
+\acrodef{OPEX}{operating expenditures}
+
+\renewcommand{\figurename}{Figure}
+
+\newcommand{\PC}[1]{\ensuremath{\left(#1\right)}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{L}[1]{>{\arraybackslash}m{#1}}
+
+% correct bad hyphenation here
+\hyphenation{al-go-rithm allows op-tical net-works semi-conduc-tor ubi-quitous energy expe-riments another Fi-gures co-verage si-mulation decrea-sing speci-fically si-mulations dimensio-ning topo-logy mo-nitoring me-chanism acknow-ledgement diffe-rent pro-blem se-veral probability although communication access minimal expe-rience intero-perability effectively signalling simula-ting}
+
+\begin{document}
+    \bstctlcite{IEEEexample:BSTcontrol}
+
+	\title{A Cost-effective HTTP-based CDN Cache for Fog/Cloud Environments}
+
+\author{
+\IEEEauthorblockN{Eduardo~S.~Gama, Roger~Immich and Luiz~F.~Bittencourt}
+\IEEEauthorblockA{Institute of Computing - State University of Campinas, Brazil \\ eduardogama@lrc.ic.unicamp.br, bit@ic.unicamp.br}}
+
+	\maketitle
+
+	\begin{abstract}
+	\end{abstract}
+
+    % \begin{IEEEkeywords}
+    % 	CDN, Content Delivery Networks, Cloud Computing, edge computing, fog computing, VNF.
+    % \end{IEEEkeywords}
+
+    %This command resets all acronyms to not used. Useful after the abstract to redefine all acronyms in the introduction.
+    
+    % \acresetall
+    
+    % \input{intro}
+    
+    \input{research-goals}
+
+    \input{contributions}
+    
+    \input{releated-work}
+
+    \input{data-policy}
+    % \input{challenges}
+    
+    % \input{conclusion}
+    
+    % \input{acknowledgements}
+
+	\bibliographystyle{IEEEtran}
+	\bibliography{references}
+	
+	\section{Attach CVs (maximum two pages for CVs)}
+	
+\end{document}
