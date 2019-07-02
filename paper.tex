@@ -1,71 +1,38 @@
-% ============= single column ==============
-%\documentclass[a4paper,10pt]{article}
-% ============= Double Column ==============
-\documentclass[conference]{IEEEtran}
-% ==========================================
-
-\IEEEoverridecommandlockouts
-
-% *** GRAPHICS RELATED PACKAGES ***
-%
-\ifCLASSINFOpdf
-	
-\fi
-
-\usepackage[english]{babel}
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi) 
+\usepackage{lipsum} %This package just generates Lorem Ipsum filler text. 
+\usepackage{fullpage} % changes the margin
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
 
-\usepackage{units}
-\usepackage[tight,footnotesize]{subfigure}
-\usepackage{graphicx}
-
-\usepackage{tabularx}
 \usepackage{booktabs}
 
-\usepackage{comment}    %to use commnet command
-\usepackage{setspace}
+\usepackage{sectsty}
 
-\usepackage{lipsum} % to use fig in multicolumn
-\usepackage{acronym}
-
-%Definition of the acronyms used in this paper
-\acrodef{5G}{five generation}
-\acrodef{CAPEX}{capital expenditures}
-\acrodef{OPEX}{operating expenditures}
-
-\renewcommand{\figurename}{Figure}
-
-\newcommand{\PC}[1]{\ensuremath{\left(#1\right)}}
-\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
-\newcolumntype{L}[1]{>{\arraybackslash}m{#1}}
-
-% correct bad hyphenation here
-\hyphenation{al-go-rithm allows op-tical net-works semi-conduc-tor ubi-quitous energy expe-riments another Fi-gures co-verage si-mulation decrea-sing speci-fically si-mulations dimensio-ning topo-logy mo-nitoring me-chanism acknow-ledgement diffe-rent pro-blem se-veral probability although communication access minimal expe-rience intero-perability effectively signalling simula-ting}
+\sectionfont{\fontsize{12}{15}\selectfont}
 
 \begin{document}
-    \bstctlcite{IEEEexample:BSTcontrol}
 
-	\title{A Cost-effective HTTP-based CDN Cache for Fog/Cloud Environments}
+	\begin{center}
+		{\bf Proposal for Google Research Awards (PhD. level) - Latin America}
+	\end{center}
 
-\author{
-\IEEEauthorblockN{Eduardo~S.~Gama, Roger~Immich and Luiz~F.~Bittencourt}
-\IEEEauthorblockA{Institute of Computing - State University of Campinas, Brazil \\ eduardogama@lrc.ic.unicamp.br, bit@ic.unicamp.br}}
+	\section{Overview}
 
-	\maketitle
+	\noindent
+	{\bf Proposal Title:} \\
+	{\bf Faculty Full Name:} Luiz Fernando Bittencourt \hfill bit@ic.unicamp.br \\
+	{\bf PhD candidate:} Eduardo de Souza Gama \hfill eduardogama@lrc.ic.unicamp.br \\
+	{\bf Google Contact name:} Walfredo Cirne
+	% \normalsize ECE 100-003 \hfill Teammates: Student1, Student2 \\
+	% TA: Adam Sumner \hfill Due Date: XX/XX/XX
 
-	\begin{abstract}
-	\end{abstract}
 
-    % \begin{IEEEkeywords}
-    % 	CDN, Content Delivery Networks, Cloud Computing, edge computing, fog computing, VNF.
-    % \end{IEEEkeywords}
-
-    %This command resets all acronyms to not used. Useful after the abstract to redefine all acronyms in the introduction.
-    
-    % \acresetall
-    
-    % \input{intro}
-    
+	\section{Proposal Body}	
+	
+	\input{abstract}
+	
     \input{research-goals}
 
     \input{contributions}
@@ -73,15 +40,35 @@
     \input{releated-work}
 
     \input{data-policy}
-    % \input{challenges}
-    
-    % \input{conclusion}
-    
-    % \input{acknowledgements}
 
-	\bibliographystyle{IEEEtran}
-	\bibliography{references}
+\begin{thebibliography}{9}
+
+\bibitem{Bittencourt} Luiz F. Bittencourt, Márcio Moraes Lopes, Ioan Petri, Omer F. Rana \emph{Towards Virtual Machine Migration in Fog Computing}. 10th International Conference on P2P, Parallel, Grid, Cloud and Internet Computing. 2015.
+
+\bibitem{BittencourtII} Luiz F. Bittencourt, Omer F. Rana, and Ioan Petri,. \emph{Cloud Computing at the Edges}. Springer International Publishing. 2016. pp. 3–12.
+
+\bibitem{Byers}  Byers, Charles C. and Wetterwald, Patrick. 2015. \emph{Fog Computing Distributing Data and Intelligence for Resiliency and Scale Necessary for IoT: The Internet of Things (Ubiquity Symposium)}. Ubiquity 2015, November, Article 4 (November 2015), 12 pages.
+
+\bibitem{Bonomi} F. Bonomi, R. Milito, J. Zhu, and S. Addepalli \emph{Fog computing and its role in the internet of things}. In workshop on Mobile cloud computing. ACM, 2012.
+
+\bibitem{StojmenovicI} I. Stojmenovic \emph{Fog computing: A cloud to the ground support for smart things and machine-to-machine networks}. In ATNAC. IEEE, 2014.
+
+\bibitem{StojmenovicII} I. Stojmenovic and S. Wen \emph{The fog computing paradigm: Scenarios and security issues}. In Computer Science and Information Systems (FedCSIS), 2014 Federated Conference on, 2014.
+
+\bibitem{Evans}  D. Evans 2005. \emph{The Internet of Things: How the Next Evolution of the Internet Is Changing Everything}[online]. Disponível em: \url{http://www.cisco.com/c/dam/en_us/about/ac79/docs/innov/IoT_IBSG_0411FINAL.pdf}
+
+\bibitem{Shanhe}  Shanhe Yi, Zhengrui Qin, and Qun Li. \emph{Security and Privacy Issues of Fog Computing: A Survey}. The 10th International Conference on Wireless Algorithms, Systems, and Applications (WASA), 2015.
+
+
+% \bibitem{Jaydip} Jaydip Sen. \emph{Security and Privacy Issues in Cloud Computing}[online]. Disponível em: \url{https://arxiv.org/pdf/1303.4814.pdf}.
+
+
+% \bibitem{Flueck}  Flueck, Alexander J. 2005. \emph{ECE 100}[online]. Chicago: Illinois Institute of Technology, Electrical and Computer Engineering Department, 2005 [cited 30 August 2005]. Available from World Wide Web: (http://www.ece.iit.edu/~flueck/ece100).
+
+\end{thebibliography}
 	
 	\section{Attach CVs (maximum two pages for CVs)}
 	
+
+
 \end{document}

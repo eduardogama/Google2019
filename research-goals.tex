@@ -1,11 +1,25 @@
 % \section{multi-tier Fog computing model}
 % \label{sec:fog-model}
 
-\section{Research Goals}
-\label{sec:fog-model}
+\subsection*{Research Goals}
+\label{sec:research-goals}
 
 % Research goals, including a problem statement.
+Currently the Internet is based on the characteristics of the best effort (Best Effort), that is, there is no guarantee of level of service. However, users often need to use the services made available in the cloud with a QoS guarantee, which is specified in a contract known as a Service Level Agreement (SLA). In other words, SLA is a document agreed between two or more entities in which the description, delivery and collection of contracted services are formally defined.
 
+In addition, there are many pragmatic trade-offs in edge provisioning. In addition to meeting the purpose of proximity between users and edge servers, edge operators also consider cost budgets, the ability of edge sites, provisioning edge site interrupts, and constraints that users can work on. regional laws or policies of ISPs. These considerations usually fit well together, resulting in a huge research space. Edge operators should consider these offsets comprehensively and exploit the best provisioning plan under various constraints
+
+In addition, a common problem with the video stream provisioning mechanism in CDNs, where CDN nodes in fog should be encouraged to share their resources and contribute to the content design. This can have a serious impact on the quality of streaming system service. Existing solutions address the problem by categorizing following way:
+
+\begin{itemize}
+
+	\item \textit{Monetary base}
+	\item \textit{Based on reciprocity}
+	\item \textit{Based on Reputation}
+	
+\end{itemize}
+
+% ========== OLD TEXT =====================
  A uso da computação em névoa para a distribuição de conteudo CDN pode ser vital para a good QoS and QoE garantees. In these kinds of scenarios - that make up the fog network - may be any access points (AP) can be extended to also provide computing and storage services. The APs may be any device that offers wired/wireless network connection to the end-user, such as smart phones, tablets, laptops, connected vehicles.% Cite bit paper 
 
 To clarify the possibilities, we first introduce a multi-tier fog computing model detailedly in Figure \ref{fig:fog-model}. As we can see, the higher tier is composed by the Provider that offers video streaming services (e.g. Netflix, Amazon, Youtube) located at the cloud, and makes either use of their own cache systems or leases one offered by CDN providers. %(... CDN providers: Akamai, CloudFlare, Rackspace, Amazon's AWS, MaxCDN CDN nodes)
@@ -23,13 +37,12 @@ Um provedor de conteudo possui a set of repositorios CDN geograficamente distrib
 
 O conteudo provido por repositorios CDN geograficamente distribuidos, visando estar proximo ao usuario. Procura melhorar o troughput da rede. Mas para isso o provedor do conteudo alvo.  CDN system
 
-
-\begin{figure}
-	\centering	
-    \includegraphics[width=\linewidth]{images/router-processing-flow.pdf}
-	\caption{State machine of rountig operation.}
-    \label{fig:fog-model}
-\end{figure}
+%\begin{figure}
+%	\centering	
+%    \includegraphics[width=\linewidth]{images/router-processing-flow.pdf}
+%	\caption{State machine of rountig operation.}
+%    \label{fig:fog-model}
+%\end{figure}
 
     
 \section{Business model perspective}
@@ -47,9 +60,6 @@ A flexibilidade ao utilizar da edge networks infrastructure oferecem new oportun
 \item \textbf{Network operator perspective:}  scalable, energy- efficient, low-cost, uniformly-monitored, programmable, and secure communication infrastructure.
 
 \end{itemize}
-
-%% CDN providers: Akamai, CloudFlare, Rackspace, Amazon's AWS, MaxCDN CDN nodes
-
 
 \section{Distribution of Information Centric}
 
@@ -75,12 +85,6 @@ make location-based virtual machine migration feasible in the Fog computing para
 
 to build pro a hierarchical, bi-directional computing infrastructure: edge devices communicate with cloudlets and cloudlets communicate with clouds. Cloudlets can also communicate with each other to perform data and process management in order to support application requirements, and to exchange Fog control/management data (such as user device and application state).
 
-\begin{figure*}
-	\centering%%
-    \includegraphics[width=\linewidth]{images/arch-cloud-fog.pdf}
-	\caption{CDN Slicing Architecture for the spatial-based methodology.}
-    \label{fig:intro}
-\end{figure*}
 
 %an architecture thet offer CDN as a Service (CDNaaS) on demand over the end-users have to take some decisions, such as resource allocation, placement, real-time management decisions, maintaining the service level agreement.
 
