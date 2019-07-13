@@ -5,6 +5,13 @@
 \label{sec:research-goals}
 
 % Research goals, including a problem statement.
+Currently the Internet is based on the characteristics of the best effort (Best-Effort), with no guarantee of level of service, beyond that, the congestion control and the lossless through rate-based transfer for conflict-free matching is deployed in IP layer. The existing schemes suitable for chunk delivery cannot be directly utilized in PoPs due to several issues:
+\textit{i)} One chunk may have several copies, which impacts on the selection of origin servers; \textit{ii)} Defferent chunks can have distinct impacts on thre Quality of Experience~(QoE), e.g., initial delay and smoothness, which is crucial to chunk transfer but not considered in the original schemes~\cite{shenIWQoS19}.
+
+We deployed some experiments in The Stable Marriage Problem in the parallel Multipoint-to-Multipoint (MP2MP) transfer scenario in order to improve the QoE in DASH chunk delivery in hybrid scenarious. 
+
+\subsection{Network Model}
+
 Currently the Internet is based on the characteristics of the best effort (Best Effort), that is, there is no guarantee of level of service. However, users often need to use the services made available in the cloud with a QoS guarantee, which is specified in a contract known as a Service Level Agreement (SLA). In other words, SLA is a document agreed between two or more entities in which the description, delivery and collection of contracted services are formally defined.
 
 In addition, there are many pragmatic trade-offs in edge provisioning. In addition to meeting the purpose of proximity between users and edge servers, edge operators also consider cost budgets, the ability of edge sites, provisioning edge site interrupts, and constraints that users can work on. regional laws or policies of ISPs. These considerations usually fit well together, resulting in a huge research space. Edge operators should consider these offsets comprehensively and exploit the best provisioning plan under various constraints
