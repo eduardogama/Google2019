@@ -4,23 +4,70 @@
 \subsection*{Research Goals}
 \label{sec:research-goals}
 
+Considering a reliable and high-quality video delivery architecture to be used in the Smart City environments. The proposed scheme will take advantage of several network-related technologies such as Cloud, Fog, and Edge Computing, as well as intelligent microservice placement and chaining. Figure~\ref{fig:scenario-arch}~(left-side) depicts a multi-tier network architecture, which is composed of a heterogeneous set of devices and applications using the resources and also offers a multi-access communication technology, such as 5G and WiFi. Based on these premises, as a novelty, we consider users to have a simultaneous multipath
+connectivity in different nodes [].
+On the right-side we describe a part of the parameters that should be assessed to define what microservices need to be deployed and what is the most suitable tier to deploy them. Notice that the parameters is down tier for feedback is distinct of the others tiers.
+The assessed parameters include, but are not limited to, the user's profile, the load of the local cell, the link quality, the motion complexity of the videos, and also smart city details such as the location and the traced route in case of users with mobility. Some of the nodes can be stationary, but others can range from low to high mobility patterns. %In order to take into consideration all these details, the proposed methods will have to fetch information from the routing protocols as well as the cell and subscriber radio interface information, such as location, cell load, and link quality.
+%, the type of the video application (eHealth, entertainment, augmented or virtual reality, 360 videos), the motion complexity of the videos, and also smart city details such as the location and the traced route in case of users with mobility. To take into consideration the node’s mobility. Some of them can be stationary, but others can range from low to high mobility patterns. In order to take into consideration all these details, the proposed methods will have to fetch information from the routing protocols as well as the cell and subscriber radio interface information, such as location, cell load, and link quality.
 
-Considering a reliable and high-quality video delivery architecture to be used in the Smart City environments. The proposed scheme will take advantage of several network-related technologies such as Cloud, Fog, and Edge Computing, as well as intelligent microservice placement and chaining. Figure 1(a) depicts a multi-tier network architecture, which is composed of a heterogeneous set of devices and applications using the resources and also offers a multi-access communication technology, such as 5G and WiFi. Based on these premises, the Figure 2(b) describe a multitude of parameters that should be assessed to define what microservices need to be deployed and what is the most suitable tier to deploy them in a smart way.
-The assessed parameters include, but are not limited to, the user’s profile, the load of the local cell, the link quality, the type of the video application (eHealth, entertainment, augmented or virtual reality, 360 videos), the motion complexity of the videos, and also smart city details such as the location and the traced route in case of users with mobility. To take into consideration the node’s mobility. Some of them can be stationary, but others can range from low to high mobility patterns. In order to take into consideration all these details, the proposed methods will have to fetch information from the routing protocols as well as the cell and subscriber radio interface information, such as location, cell load, and link quality.
-
+\vspace{1cm}
 \begin{figure*}[htpb]
 	\centering
 	\includegraphics[width=1.0\textwidth]{images/scenario_incomplete}
-	\caption{ a) DASH-based Adaptive Multimedia and Mulsemedia Delivery System. b) Encoding Architecture. }
-	\label{fig:classes_E}
+	\vspace{-1cm}
+
+	\caption{DASH-based Adaptive Multimedia Delivery System in an Smart City Envirnment.}
+
+	\label{fig:scenario-arch}
 \end{figure*}
+% The experiments will be implemented using the simulation software ns-3 (http://www.nsnam.org) to create a multi-tier Edge/Cloud Computing environment. existing ns-3 models are quite diverse and have a rather loose compatibility between each other. The ns-3 community provides MPEG-DASH implementations and support mobility.%, it happens that they are not directly usable due to incompatibilities. In this work, we present an ns-3 distribution that packages the AMuSt Framework DASH implementation [81]
 
-The experiments will be implemented using the simulation software ns-3 (http://www.nsnam.org) to create a multi-tier Edge/Cloud Computing environment. 
-The first tool that will be used is Docker. It allows to create, configure, and run containers, which is a lightweight way to provide isolation, automation, compatibility, and integration of services. The second tool is Kubernetes. This is a container-orchestration platform to automate several container-related activities, such as automatic deployment, management, scaling, and operations between different clusters and hosts. JUJU is a modeling tool to perform quick deploys of container-based applications in several private and public cloud services. It also helps to configure, interact, and easily perform several other operational tasks. In addition, the 5G-EmPOWER will be used to provide Multi-access Edge Computing support with heterogeneous radio access technologies and lightweight virtualization.
+% The first tool that will be used is Docker. It allows to create, configure, and run containers, which is a lightweight way to provide isolation, automation, compatibility, and integration of services. The second tool is Kubernetes. This is a container-orchestration platform to automate several container-related activities, such as automatic deployment, management, scaling, and operations between different clusters and hosts. JUJU is a modeling tool to perform quick deploys of container-based applications in several private and public cloud services. It also helps to configure, interact, and easily perform several other operational tasks. In addition, the 5G-EmPOWER will be used to provide Multi-access Edge Computing support with heterogeneous radio access technologies and lightweight virtualization.
 
-Given the aforementioned open issues in this topic, the research questions expected to be answered are:
+%Description of the work you'd like to do, as well as the expected outcomes and results.
 
-% The other three levels represent the network mist / edge. This work takes into account edge nodes with computational capacity and storage, and classifies them hierarchically according to their coverage and communication technology [?]. In a multi-level ecosystem, the Core Network Regional Edge can perform management within a city, for example, baseband unit (BBU) and Internet service provider (ISP). The Access Edge Network, which supports a few dozen or perhaps a few hundred local nodes in the fog, can be represented by a Base Station or Access Point. Edge Gateways can be deployed on local fog nodes such as personal computers, laptops, and smartphones where the node delegates video content over wireless connections.
+Given the aforementioned multi-tier edge/cloud environment and service architecture, this work aims to tackle the following research questions expected:
+\textit{i)} Build an hierarchical adaptive multimedia delivery system to analyze the influence of chunk size variation on bitrate adaptation hierarchical scheduling algorithm; \textit{ii)} How to determine the best tiers to place microservices; \textit{iii)} Facilitates video streaming through multiple sources; 
+\textit{iv)} Use location information to estimate best paths/gain/ in real time of edge servers. How to dynamically estimate the gain between the different close perspective of the proximity of the servers. You need to redistribute unsolicited content or just add content on other edge servers when user changes server? Which one should we do this?
+%A video system becomes more robust since multiple points of failure are inserted, enhancing availability; ii) increase in reliability since the information that passes through the network is not stored by the intermediate node; iii) Facilitates video streaming through multiple sources; 
+
+
+%Neste trabalho, queremos construir mecanismo para um sistema de distribuição adaptativo multimidia baseado em DASH, buscando o otimizar sua topologia de forma adaptativa para minimizar a latência de reprodução média e melhorar a entrega do fluxo de forma oportuna. 
+%Neste trabalho, queremos construir um sistema CDN na fog com o uso de cache e sobreposição
+%de rede para para streaming de video ao vivo, e otimizar sua topologia de forma adaptativa para
+%minimizar a latência de reprodução média e melhorar a entrega do fluxo de forma oportuna.
+%A latência de reprodução é a diferença entre o tempo de reprodução (ponto de reprodução) na
+%origem de midia e em um nó.
+%Modelagem de propriedades de balanceamento de carga e desempenho de cache
+%em sistemas de Névoa-Nuvem multicamadas.
+%1. Interesses perspectivas do usuário, provedor de serviços e provedor de rede.
+%2. Qual a melhor forma de operar problemas de cache em névoa-nuvem? Onde? Quando?
+%Como?
+%3. Redimensionar recursos necessários para suportar demanda de Acordo com o tempo.
+%4. Utilizar máquinas virtuais (container, microservices) para atingir a latência minima para
+%acelerar a execução do escalonamento, mas irá implicar em desperdicios de recurso (e
+%dinheiro)? Caso sim, como minimizar este desperdicio?
+%
+%Suporte a mobilidade.
+%1. Quais mecanismos devemos utilizar/desenvolver para lidar com a mobilidade do usuário?
+%Como dividir o conteúdo e recursos computacionais?
+%2. Como utilizar a informação de localização para estimar melhores caminhos/ganho/ em
+%tempo real dos servidores de borda. Como estimar dinamicamente o ganho entre as dife-
+%rentes perspectivas da proximidade dos servidores.
+%3. É necessário re-distribuir o conteúdo não requisitado ou apenas adicionar o conteúdo em
+%outros servidores de borda quando o usuário muda servidor? Quais nós devem fazer isso?
+%4. É necessário possuir nós reservados extras e prontamente disponiveis com intuito de re-
+%dundância de recurso computacional?
+%5. Antes de escolher um provedor de IaaS para alocar máquinas, quais serviços é necessário
+%acrescentar para o provisionamento do conteúdo?
+
+%\begin{enumerate}
+%	\item We aim to build an hierarchical adaptive multimedia delivery system to analyze the influence of chunk size variation on bitrate adaptation scheduling algorithm performance.
+%\end{enumerate}
+%In this proposal, we aim to build an hierarchical adaptive multimedia delivery system to analyze the influence of chunk size variation on bitrate adaptation scheduling algorithm performance. Based on the features of HTTP-based adaptive video streaming, we build a general model for debloy a cooperative video streaming delivery, which may be used in D2D in mobile network, regional networks using Points of Presence as nodes, during flash crowds where having upload bandwidth alone is not sufficient to accommodate the flash crowd as the nodes take time to locate the available resources.
+
+
+% The other three levels represent the network mist / edge. This work takes into account edge nodes with computational capacity and storage, and classifies them hierarchically according to their coverage and communication technology [?]. In a multi-level ecosystem, the Core Network Regional Edge can perform management within a city, for example, baseband unit (BBU) and Internet service provider (ISP). The Access Edge Network, which supports a few dozen or perhaps a few hundred local nodes in the fog, can be represented by a Base Station or Access Point. Edge Gateways can be deployed on local fog nodes such as personal computers, laptops, and smartphones where the node delegates video content over wi\reless connections.
 
 % Research goals, including a problem statement.
 %Currently the Internet is based on the characteristics of the best effort (Best-Effort), with no guarantee of level of service, beyond that, the congestion control and the lossless through rate-based transfer for conflict-free matching is deployed in IP layer. The existing schemes suitable for chunk delivery cannot be directly utilized in PoPs due to several issues:
