@@ -4,8 +4,8 @@
 \subsection*{Research Goals}
 \label{sec:research-goals}
 
-Considering a reliable and high-quality video delivery DASH-based to be used in the Smart City environments~\cite{gamaUCC2019, KreuzbergerWorkshop2016}. The proposed scheme will take advantage of several network-related technologies such as Cloud, Fog, and Edge Computing, as well as intelligent microservice placement and chaining. Figure~\ref{fig:scenario-arch}~(left-side) depicts a multi-tier network architecture, which is composed of a heterogeneous set of devices and applications using the resources and also offers a multi-access communication technology, such as 5G and WiFi. Based on these premises, as a novelty, we consider users to have a simultaneous multipath connectivity in different nodes~\cite{poliakovPHD2018, Velasquez2018}.
-On the right-side we describe part of the parameters that should be assessed to define what microservices needed to be deployed and what is the most suitable tier to deploy them. Notice that the parameters is down tier for feedback is distinct of the others tiers.
+Considering a reliable and high-quality video delivery DASH-based to be used in the Smart City environments~\cite{gamaUCC2019, KreuzbergerWorkshop2016}. The proposed scheme will take advantage of several network-related technologies such as Cloud, Fog, and Edge Computing, as well as intelligent service placement and chaining. Figure~\ref{fig:scenario-arch}~(left-side) depicts a multi-tier network architecture, which is composed of a heterogeneous set of devices and applications using the resources and also offers a multi-access communication technology, such as 5G and WiFi. Based on these premises, as a novelty, we consider users to have a simultaneous multipath connectivity in DASH video streaming~\cite{poliakovPHD2018, Velasquez2018}.
+On the right-side we describe part of the parameters that should be assessed to define what services needed to be deployed and what is the most suitable tier to deploy them. Notice that the parameters in down tier for feedback is distinct of the others tiers.
 The assessed parameters include, but are not limited to, the user's profile, the load of the local cell, the link quality, the motion complexity of the videos, and also smart city details such as the location and the traced route in case of users with mobility. Some of the nodes can be stationary, but others can range from low to high mobility patterns. %In order to take into consideration all these details, the proposed methods will have to fetch information from the routing protocols as well as the cell and subscriber radio interface information, such as location, cell load, and link quality.
 %, the type of the video application (eHealth, entertainment, augmented or virtual reality, 360 videos), the motion complexity of the videos, and also smart city details such as the location and the traced route in case of users with mobility. To take into consideration the node’s mobility. Some of them can be stationary, but others can range from low to high mobility patterns. In order to take into consideration all these details, the proposed methods will have to fetch information from the routing protocols as well as the cell and subscriber radio interface information, such as location, cell load, and link quality.
 
@@ -14,9 +14,7 @@ The assessed parameters include, but are not limited to, the user's profile, the
 	\centering
 	\includegraphics[width=1.0\textwidth]{images/scenario_incomplete}
 	\vspace{-1cm}
-
-	\caption{DASH-based Adaptive Multimedia Delivery System in an Smart City Envirnment.}
-
+	\caption{DASH-based Adaptive Multimedia Delivery System in an Smart City Environment.}
 	\label{fig:scenario-arch}
 \end{figure*}
 % The experiments will be implemented using the simulation software ns-3 (http://www.nsnam.org) to create a multi-tier Edge/Cloud Computing environment. existing ns-3 models are quite diverse and have a rather loose compatibility between each other. The ns-3 community provides MPEG-DASH implementations and support mobility.%, it happens that they are not directly usable due to incompatibilities. In this work, we present an ns-3 distribution that packages the AMuSt Framework DASH implementation [81]
@@ -26,7 +24,7 @@ The assessed parameters include, but are not limited to, the user's profile, the
 %Description of the work you'd like to do, as well as the expected outcomes and results.
 
 Given the aforementioned multi-tier edge/cloud environment and service architecture, this work aims to tackle the following research questions expected:
-\textit{i)} Use location information to estimate best paths in real time and how to dynamically estimate the gain between the different close perspective of the proximity of the servers. You need to redistribute unsolicited content or just add content on other nodes when the end-user changes; \textit{ii)} Analyze the influence of video chunk size variation on bitrate adaptation algorithms; \textit{iii)} How to determine the best tiers to place microservices; \textit{iv)} Facilitates video streaming through multiple sources at the same time.
+\textit{i)} Use location information to estimate best paths in real time and how to dynamically estimate the gain between the different proximity perspectives of the nodes. You need to redistribute or just add the unsolicited video chunks on the other nodes when the end-user changes; \textit{ii)} Analyze the influence of video chunk size variation on bitrate adaptation algorithms; \textit{iii)} How to determine the best tiers to service placements; \textit{iv)} Facilitates video streaming through multiple sources at the same time.
 
 %A video system becomes more robust since multiple points of failure are inserted, enhancing availability; ii) increase in reliability since the information that passes through the network is not stored by the intermediate node; iii) Facilitates video streaming through multiple sources; 
 
